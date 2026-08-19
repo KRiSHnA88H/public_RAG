@@ -1,17 +1,31 @@
-import genration as g
 import ollama
 import embedding as e
+import genration as g
 
-stream = ollama.chat(
-  model=e.LANGUAGE_MODEL,
-  messages=[
-    {'role': 'system', 'content': g.instruction_prompt},
-    {'role': 'user', 'content': g.input_query},
-  ],
-  stream=True,
-)
 
-# print the response from the chatbot in real-time
-print('Chatbot response:')
-for chunk in stream:
-  print(chunk['message']['content'], end='', flush=True)
+def generate_answer(input_query):
+
+    instruction_prompt = g.generate_prompt(input_query)
+
+    stream = ollama.chat(
+        model=e.LANGUAGE_MODEL,
+        messages=[
+            {
+                'role': 'system',
+                'content': instruction_prompt
+            },
+            {
+                'role': 'user',
+                'content': input_query
+            }
+        ],
+        stream=True,
+    )
+
+    answer = ""
+
+    for chunk in stream:
+
+        answer += chunk['message']['content']
+
+    return answer
