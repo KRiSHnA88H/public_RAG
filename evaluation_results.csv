@@ -1,0 +1,11 @@
+question,retrieval_latency_s,answer_latency_s,recall_at_3,reciprocal_rank,top_similarity,retrieved_chunks,answer_characters,status
+How much of their day do cats spend sleeping?,0.0468,0.187,1.0,0.5,0.8809,3,46,success
+What is the technical term for a cat hairball?,0.0362,0.2106,0.0,0.0,0.8117,3,54,success
+What is a group of cats called?,0.0382,0.1419,0.0,0.0,0.82,3,38,success
+How many different sounds can cats make?,0.0343,0.162,1.0,1.0,0.8626,3,69,success
+What was the first cat in space called?,0.035,0.2146,1.0,1.0,0.8652,3,76,success
+How fast can a cat run over a short distance?,0.0519,0.2017,1.0,1.0,0.8198,3,79,success
+How high can cats jump?,0.0554,0.1687,1.0,0.5,0.8241,3,66,success
+How many whiskers does a cat usually have on each side?,0.0404,0.166,1.0,1.0,0.8647,3,61,success
+What is the normal body temperature of a cat?,0.0471,0.2423,1.0,1.0,0.9526,3,95,success
+How many bones does a cat have?,0.0626,0.1246,1.0,1.0,0.8634,3,32,success
